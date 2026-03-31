@@ -1,0 +1,88 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}Privacy Policy - Mikkelsen Anesthesia{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-red-700 to-red-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <div class="mb-8">
+                <img src="{% static 'images/Logo.jpg' %}" alt="Mikkelsen Anesthesia Logo" class="h-24 mx-auto mb-6" style="max-height: 120px;">
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Privacy Policy
+            </h1>
+            <p class="text-xl text-red-100 max-w-3xl mx-auto">
+                Our commitment to protecting your privacy and personal information
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Privacy Policy Content -->
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 mb-6">
+                    Mikkelsen Anesthesia is committed to safeguarding your privacy online. Please read the following statement to understand how your personal information will be treated as you make full use of our services. This web site is owned and operated by Mikkelsen Anesthesia.
+                </p>
+
+                <p class="text-gray-700 mb-6">
+                    Mikkelsen Anesthesia appreciates your trust and we take your privacy very seriously. Building long lasting business relationships start with trust, which is why we care about keeping your personal information private. Rest assured that your privacy will not be compromised in the least.
+                </p>
+
+                <h2 class="text-2xl font-bold text-red-900 mb-4 mt-8">The Mikkelsen Anesthesia Commitment to Your Privacy</h2>
+
+                <p class="text-gray-700 mb-6">
+                    Mikkelsen Anesthesia never shares our clients' personal information with third parties. We will not divulge, sell or provide any personal information — it's that simple.
+                </p>
+
+                <h2 class="text-2xl font-bold text-red-900 mb-4 mt-8">Use of Information</h2>
+
+                <p class="text-gray-700 mb-6">
+                    Mikkelsen Anesthesia may also disclose information about our users when we believe, in good faith, that the disclosure is required by law.
+                </p>
+
+                <h2 class="text-2xl font-bold text-red-900 mb-4 mt-8">Mikkelsen Anesthesia Liability Restrictions</h2>
+
+                <p class="text-gray-700 mb-6">
+                    The projects listed on this website are provided "as is" and without warranties of any kind to the fullest extent permissible pursuant to applicable laws.
+                </p>
+
+                <h2 class="text-2xl font-bold text-red-900 mb-4 mt-8">Mikkelsen Anesthesia Content and How it Applies</h2>
+
+                <p class="text-gray-700 mb-6">
+                    Information on this site includes descriptions of services are available in the United States of America only.
+                </p>
+
+                <h2 class="text-2xl font-bold text-red-900 mb-4 mt-8">Mikkelsen Anesthesia Privacy Statement Summary</h2>
+
+                <p class="text-gray-700 mb-6">
+                    Mikkelsen Anesthesia respects your privacy and appreciates your full trust.
+                </p>
+
+                <h2 class="text-2xl font-bold text-red-900 mb-4 mt-8">How to Contact Mikkelsen Anesthesia</h2>
+
+                <p class="text-gray-700 mb-6">
+                    If you have any questions regarding our privacy statement, please feel free to contact us or by phone at (608) 865-0971.
+                </p>
+
+                <p class="text-gray-700">
+                    The Mikkelsen Anesthesia privacy statement may change from time to time, so please check back often.
+                </p>
+            </div>
+
+            <!-- Contact Button -->
+            <div class="text-center mt-12">
+                <a href="{% url 'contact' %}" class="bg-red-700 text-white hover:bg-red-800 px-8 py-3 rounded-lg text-lg font-semibold transition-colors inline-block">
+                    Contact Us With Questions
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

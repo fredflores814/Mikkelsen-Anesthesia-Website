@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mikkelsen Anesthesia - Mobile Anesthesia Services{% endblock %}</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="{% static 'images/Logo.jpg' %}" alt="Mikkelsen Anesthesia Logo" class="h-10 mr-3" style="max-height: 50px;">
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="{% url 'home' %}" class="text-black hover:text-red-700 px-3 py-2 text-sm font-bold transition-colors">Home</a>
+                    <a href="{% url 'services' %}" class="text-black hover:text-red-700 px-3 py-2 text-sm font-bold transition-colors">Services</a>
+                    <a href="{% url 'financial_policy' %}" class="text-black hover:text-red-700 px-3 py-2 text-sm font-bold transition-colors">Financial Policy</a>
+                    <a href="{% url 'faq' %}" class="text-black hover:text-red-700 px-3 py-2 text-sm font-bold transition-colors">FAQ</a>
+                    <a href="{% url 'contact' %}" class="text-black hover:text-red-700 px-3 py-2 text-sm font-bold transition-colors">Contact</a>
+                    <a href="{% url 'contact' %}" class="bg-red-700 text-white hover:bg-red-800 px-4 py-2 rounded-md text-sm font-bold transition-colors">
+                        Schedule Consultation
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-black hover:text-red-700 focus:outline-none focus:text-red-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="{% url 'home' %}" class="block text-black hover:text-red-700 px-3 py-2 text-base font-bold">Home</a>
+                <a href="{% url 'services' %}" class="block text-black hover:text-red-700 px-3 py-2 text-base font-bold">Services</a>
+                <a href="{% url 'financial_policy' %}" class="block text-black hover:text-red-700 px-3 py-2 text-base font-bold">Financial Policy</a>
+                <a href="{% url 'faq' %}" class="block text-black hover:text-red-700 px-3 py-2 text-base font-bold">FAQ</a>
+                <a href="{% url 'contact' %}" class="block text-black hover:text-red-700 px-3 py-2 text-base font-bold">Contact</a>
+                <a href="{% url 'contact' %}" class="block bg-red-700 text-white hover:bg-red-800 px-3 py-2 rounded-md text-base font-bold text-center mx-3">
+                    Schedule Consultation
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="{% static 'images/Logo.jpg' %}" alt="Mikkelsen Anesthesia Logo" class="h-12 mr-3" style="max-height: 60px;">
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Providing comprehensive mobile anesthesia services with a focus on patient safety, comfort, and exceptional care in office-based and outpatient settings.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/1AdTqVjx2A/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-red-400 transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="{% url 'services' %}" class="text-gray-300 hover:text-red-400 transition-colors">Services</a></li>
+                        <li><a href="{% url 'financial_policy' %}" class="text-gray-300 hover:text-red-400 transition-colors">Financial Policy</a></li>
+                        <li><a href="{% url 'faq' %}" class="text-gray-300 hover:text-red-400 transition-colors">FAQ</a></li>
+                        <li><a href="{% url 'contact' %}" class="text-gray-300 hover:text-red-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-red-400"></i>
+                            <a href="tel:608-865-0971" class="text-gray-300 hover:text-red-400 transition-colors">(608) 865-0971</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-red-400"></i>
+                            <a href="mailto:ErikMikkelsen@mikkelsenanesthesia.com" class="text-gray-300 hover:text-red-400 transition-colors">ErikMikkelsen@mikkelsenanesthesia.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Mikkelsen Anesthesia. All rights reserved. | <a href="{% url 'privacy_policy' %}" class="hover:text-red-400">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

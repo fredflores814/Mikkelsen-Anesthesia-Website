@@ -1,0 +1,149 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}Mikkelsen Anesthesia | Expert Mobile Anesthesia Services{% endblock %}
+
+{% block content %}
+{% with show_hero_quote=True %}
+<!-- Quote Section -->
+<section class="bg-gradient-to-r from-red-50 to-red-100 py-8 border-b border-red-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="bg-white rounded-lg shadow-lg p-6 inline-block">
+            <p class="text-2xl md:text-3xl text-red-800 italic font-bold">
+                "Concierge Mobile Anesthesia Expert - Where Safe Dreams Come To You."
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-red-700 to-red-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <div class="mb-8">
+                <img src="{% static 'images/Logo.jpg' %}" alt="Mikkelsen Anesthesia Logo" class="h-24 mx-auto mb-6" style="max-height: 120px;">
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Mikkelsen Anesthesia LLC
+            </h1>
+            <p class="text-xl md:text-2xl text-red-100 max-w-3xl mx-auto font-serif italic">
+                Mobile Anesthesia Provider for Wisconsin and Northern Illinois
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Main About Content -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    Experience You Can Trust
+                </h2>
+                <p class="text-gray-600 mb-6 text-lg">
+                    I am a Certified Registered Nurse Anesthetist with over 26 years of healthcare experience, including 5 years as a National Guard medic and 17 years as a CRNA providing anesthesia care in hospitals, ambulatory surgery centers, and office-based settings. I founded Mikkelsen Anesthesia LLC with a simple goal: to deliver safe, high-quality anesthesia care in a way that feels personal, attentive, and reassuring for every patient I serve.
+                </p>
+                <p class="text-gray-600 mb-6 text-lg">
+                    Mikkelsen Anesthesia LLC is a mobile anesthesia practice. I bring comprehensive anesthesia services directly to the office or surgical setting you choose, allowing patients and providers to receive hospital-level care within the convenience of their own clinical environment.
+                </p>
+            </div>
+            <div class="order-2 lg:order-1">
+                <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-8 flex items-center justify-center">
+                    <img src="{% static 'images/IMG_0656.JPG' %}" alt="Erik Mikkelsen - CRNA" class="rounded-lg shadow-xl max-w-full h-auto object-cover" style="max-height: 400px;">
+                </div>
+                <p class="text-center text-gray-600 mt-4 italic">
+                    Erik Mikkelsen, CRNA
+                </p>
+                <p class="text-center text-gray-600 mt-2 italic">
+                    Sole Proprietor, Mikkelsen Anesthesia LLC
+                </p>
+            </div>
+        </div>
+
+        <!-- Personalized Care Section -->
+        <div class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
+                Personalized, Start-to-Finish Care
+            </h2>
+            <p class="text-gray-600 mb-6 text-lg text-center max-w-4xl mx-auto">
+                When you work with me, you work directly with me from start to finish. I personally schedule and provide every anesthesia service, ensuring true continuity of care, full accountability, and a consistently high standard of practice.
+            </p>
+            <p class="text-gray-600 mb-6 text-lg text-center max-w-4xl mx-auto">
+                From our very first conversation, I guide you through the pre-operative process, answer your questions, and help you feel fully prepared. I remain by your side throughout your procedure and continue to be available afterward to support you during recovery.
+            </p>
+        </div>
+
+        <!-- Safety Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div class="order-2 lg:order-1">
+                <div class="bg-red-100 rounded-xl p-8 flex items-center justify-center">
+                    <i class="fas fa-shield-alt text-red-700 text-8xl"></i>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    Uncompromising Safety Standards
+                </h2>
+                <p class="text-gray-600 mb-6 text-lg">
+                    Safety is always my highest priority. Office-based anesthesia must meet rigorous safety expectations, and I take that responsibility seriously. During your procedure, you are continuously monitored for oxygen saturation, heart rate, blood pressure, and ventilation.
+                </p>
+                <p class="text-gray-600 mb-6 text-lg">
+                    I bring industry-leading anesthesia equipment, advanced monitoring technology, and full emergency medications and equipment to every location to ensure the highest level of preparedness and protection.
+                </p>
+            </div>
+        </div>
+
+        <!-- Compassionate Care Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    Compassionate, Individualized Approach
+                </h2>
+                <p class="text-gray-600 mb-6 text-lg">
+                    I have extensive experience caring for patients who experience anxiety, as well as pediatric, special needs, and neurodiverse patients. I understand that anesthesia can feel intimidating, and I believe feeling heard and understood is just as important as clinical expertise.
+                </p>
+                <p class="text-gray-600 mb-6 text-lg">
+                    I take the time to listen, tailor my approach to your individual needs, and create a calm, reassuring environment where you can feel confident and at ease.
+                </p>
+            </div>
+            <div class="order-2 lg:order-1">
+                <div class="bg-red-100 rounded-xl p-8 flex items-center justify-center">
+                    <i class="fas fa-heart text-red-700 text-8xl"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collaborative Service Section -->
+        <div class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
+                Collaborative, Concierge-Level Service
+            </h2>
+            <p class="text-gray-600 mb-6 text-lg text-center max-w-4xl mx-auto">
+                I partner closely with surgeons and facility teams to provide seamless, concierge-level anesthesia services tailored to each practice. Above all, my focus remains on you — your safety, your comfort, and your peace of mind. Contact me for a consultation or questions.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-red-700 to-red-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Partner With Me?
+        </h2>
+        <p class="text-xl mb-8 text-red-100">
+            Discover how Mikkelsen Anesthesia can enhance your practice and improve patient experience with my expert mobile anesthesia services.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="{% url 'contact' %}" class="bg-white text-red-700 hover:bg-gray-100 px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+                Schedule Consultation
+            </a>
+            <a href="{% url 'services' %}" class="border-2 border-white text-white hover:bg-white hover:text-red-700 px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+                Learn About Services
+            </a>
+        </div>
+    </div>
+</section>
+{% endwith %}
+{% endblock %}

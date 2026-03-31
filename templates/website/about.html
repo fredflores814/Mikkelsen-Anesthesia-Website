@@ -1,0 +1,237 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}About Us - Mikkelsen Anesthesia{% endblock %}
+
+{% block content %}
+{% with show_hero_quote=True %}
+<!-- Quote Section -->
+<section class="bg-gradient-to-r from-red-50 to-red-100 py-8 border-b border-red-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="bg-white rounded-lg shadow-lg p-6 inline-block">
+            <p class="text-2xl md:text-3xl text-red-800 italic font-bold">
+                "Concierge mobile anesthesia expert - where safe dreams come to you."
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-red-700 to-red-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                About Mikkelsen Anesthesia
+            </h1>
+            <p class="text-xl text-red-100 max-w-3xl mx-auto">
+                Excellence in mobile anesthesia services since our founding
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Main About Content -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    Our Story & Mission
+                </h2>
+                <p class="text-gray-600 mb-6 text-lg">
+                    Mikkelsen Anesthesia was established to provide comprehensive anesthesia services specializing in mobile anesthesia solutions for office-based and outpatient healthcare settings. Our company delivers custom-tailored anesthesia services across a variety of outpatient environments.
+                </p>
+                <p class="text-gray-600 mb-6 text-lg">
+                    We focus on enhancing patient experience, comfort, and safety by offering a range of anesthesia options, from local anesthesia to deep sedation and general anesthesia, depending on procedural requirements and patient needs.
+                </p>
+                <div class="bg-red-50 border-l-4 border-red-700 p-6 rounded">
+                    <h3 class="text-xl font-semibold text-red-900 mb-2">Our Mission</h3>
+                    <p class="text-red-800">
+                        To provide exceptional anesthesia care that ensures patient safety, comfort, and peace of mind while enabling healthcare providers to deliver optimal treatment in outpatient settings.
+                    </p>
+                </div>
+            </div>
+            <div class="order-2 lg:order-1">
+                <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-8 flex items-center justify-center">
+                    <img src="{% static 'images/IMG_0656.JPG' %}" alt="Dr. Mikkelsen - Founder" class="rounded-lg shadow-xl max-w-full h-auto object-cover" style="max-height: 400px;">
+                </div>
+                <p class="text-center text-gray-600 mt-4 italic">
+                    Dr. Mikkelsen - Founder & Lead Anesthesiologist
+                </p>
+            </div>
+        </div>
+
+        <!-- Values Section -->
+        <div class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
+                Our Core Values
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-red-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-red-700 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Safety First</h3>
+                    <p class="text-gray-600">
+                        Patient safety is our highest priority, with rigorous protocols and state-of-the-art monitoring equipment.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-red-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-red-700 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Compassionate Care</h3>
+                    <p class="text-gray-600">
+                        We treat every patient with dignity, respect, and empathy, ensuring their comfort throughout the process.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-red-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-graduation-cap text-red-700 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Expertise</h3>
+                    <p class="text-gray-600">
+                        Our board-certified anesthesiologists bring extensive experience and specialized training to every case.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-red-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-handshake text-red-700 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Partnership</h3>
+                    <p class="text-gray-600">
+                        We work collaboratively with healthcare providers to ensure seamless integration and optimal patient outcomes.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expertise Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div class="order-2 lg:order-1">
+                <div class="bg-red-100 rounded-xl p-8 flex items-center justify-center">
+                    <i class="fas fa-user-md text-red-700 text-8xl"></i>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    Our Expertise
+                </h2>
+                <p class="text-gray-600 mb-6 text-lg">
+                    Our team of highly qualified anesthesiologists specializes in providing anesthesia services for a wide range of outpatient procedures and settings.
+                </p>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-red-600 mt-1 mr-3"></i>
+                        <span class="text-gray-700">Board-certified anesthesiologists with extensive outpatient experience</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-red-600 mt-1 mr-3"></i>
+                        <span class="text-gray-700">Specialized training in office-based anesthesia and sedation techniques</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-red-600 mt-1 mr-3"></i>
+                        <span class="text-gray-700">Advanced cardiac life support (ACLS) and pediatric advanced life support (PALS) certified</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-red-600 mt-1 mr-3"></i>
+                        <span class="text-gray-700">Continuous education and training in the latest anesthesia techniques</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Service Areas -->
+        <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
+                Service Environments
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="bg-red-100 rounded-lg w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-tooth text-red-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Dental Offices</h3>
+                    <p class="text-gray-600">
+                        Specialized anesthesia for dental procedures, from routine extractions to complex oral surgeries.
+                    </p>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="bg-red-100 rounded-lg w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-procedures text-red-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Oral Surgery Centers</h3>
+                    <p class="text-gray-600">
+                        Comprehensive anesthesia support for complex oral and maxillofacial surgical procedures.
+                    </p>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="bg-red-100 rounded-lg w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-clinic-medical text-red-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Ambulatory Surgical Centers</h3>
+                    <p class="text-gray-600">
+                        Full anesthesia services for outpatient surgical procedures in ASC environments.
+                    </p>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="bg-red-100 rounded-lg w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-microscope text-red-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Endoscopy Centers</h3>
+                    <p class="text-gray-600">
+                        Safe and comfortable sedation for gastrointestinal and other endoscopic procedures.
+                    </p>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="bg-red-100 rounded-lg w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-x-ray text-red-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Radiology Departments</h3>
+                    <p class="text-gray-600">
+                        Anesthesia services for interventional radiology and imaging procedures requiring sedation.
+                    </p>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="bg-red-100 rounded-lg w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-user-friends text-red-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Specialty Clinics</h3>
+                    <p class="text-gray-600">
+                        Customized anesthesia solutions for various specialty medical procedures and treatments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-red-700 to-red-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Partner With Us?
+        </h2>
+        <p class="text-xl mb-8 text-red-100">
+            Discover how Mikkelsen Anesthesia can enhance your practice and improve patient experience with our expert mobile anesthesia services.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="{% url 'contact' %}" class="bg-white text-red-700 hover:bg-gray-100 px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+                Schedule Consultation
+            </a>
+            <a href="{% url 'services' %}" class="border-2 border-white text-white hover:bg-white hover:text-red-700 px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+                Learn About Services
+            </a>
+        </div>
+    </div>
+</section>
+{% endwith %}
+{% endblock %}

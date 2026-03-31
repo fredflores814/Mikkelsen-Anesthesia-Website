@@ -1,0 +1,506 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}Frequently Asked Questions - Mikkelsen Anesthesia{% endblock %}
+
+{% block content %}
+{% with show_hero_quote=True %}
+<!-- Quote Section -->
+<section class="bg-gradient-to-r from-red-50 to-red-100 py-8 border-b border-red-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="bg-white rounded-lg shadow-lg p-6 inline-block">
+            <p class="text-2xl md:text-3xl text-red-800 italic font-bold">
+                "Concierge Mobile Anesthesia Expert - Where Safe Dreams Come To You."
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-red-700 to-red-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <div class="mb-8">
+                <img src="{% static 'images/Logo.jpg' %}" alt="Mikkelsen Anesthesia Logo" class="h-24 mx-auto mb-6" style="max-height: 120px;">
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Frequently Asked Questions
+            </h1>
+            <p class="text-xl text-red-100 max-w-3xl mx-auto">
+                Everything you need to know about our mobile anesthesia services
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Content -->
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-6">
+            <!-- FAQ 1: What is mobile anesthesia? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        What is mobile anesthesia?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        Mobile anesthesia involves bringing hospital-grade anesthesia services directly to dental, oral surgery, or medical offices. I provide safe, in-office sedation and anesthesia, eliminating the need for a hospital or surgery center visit while maintaining the same standards of care.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 2: What types of anesthesia do you offer? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        What types of anesthesia do you offer?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700 mb-4">
+                        I provide a full range of anesthesia options, including:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Local anesthesia (in coordination with your provider)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Monitored Anesthesia Care and IV Sedation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Regional Anesthesia</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>General anesthesia</span>
+                        </li>
+                    </ul>
+                    <p class="text-gray-700 mt-4">
+                        The type of anesthesia used depends on the procedure, your medical history, comfort level, and collaboration between your provider and anesthesia team.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 3: Is it safe outside of a hospital setting? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        Is it safe outside of a hospital setting?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700 mb-4">
+                        Office-based anesthesia is safe when delivered by experienced anesthesia professionals using hospital-grade equipment and monitoring. I am a board-certified registered nurse anesthetists (CRNA) trained in outpatient and office-based settings. Patients are carefully evaluated beforehand and continuously monitored before, during, and after the procedure.
+                    </p>
+                    <p class="text-gray-700">
+                        I follow nationally recognized standards for office-based anesthesia care, monitoring, and emergency preparedness.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 4: Where will my procedure take place? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        Where will my procedure take place?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        Your procedure will take place in your provider's office or a designated outpatient setting. I bring all necessary anesthesia equipment, medications, and monitoring tools directly to the location.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 5: Will I be fully asleep or just sedated? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        Will I be fully asleep or just sedated?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        That depends on the type of anesthesia selected. Some patients receive IV sedation and remain relaxed but responsive, while others receive deep sedation or general anesthesia and are fully asleep. Your anesthesia provider will review the safest and most appropriate option with you prior to your procedure.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 6: What does recovery feel like and how long does it take? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        What does recovery feel like and how long does it take?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        Recovery varies based on the type of anesthesia used. Many patients feel groggy or tired initially, with effects gradually wearing off over several hours. Most patients return home the same day and resume normal activities within 24 hours, although you may need someone to drive you home and stay with you for a short period.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 7: Do my medical conditions or medications affect anesthesia? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        Do my medical conditions or medications affect anesthesia?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        Yes. Medical conditions and medications can affect anesthesia planning. I conduct a thorough pre-anesthesia review of your health history and medications to ensure anesthesia is delivered safely and appropriately. Additional testing or medical clearance may be required in some cases.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 8: What do I need to do before my procedure? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        What do I need to do before my procedure?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700 mb-4">
+                        You will receive specific pre-procedure instructions, which may include:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 ml-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Fasting guidelines</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Medication instructions or adjustments</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Required labs or medical clearance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Transportation arrangements (a responsible adult must drive you home)</span>
+                        </li>
+                    </ul>
+                    <p class="text-gray-700 mt-4">
+                        Following these instructions is important for your safety.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 9: Can my child safely have anesthesia in a dental office? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        Can my child safely have anesthesia in a dental office?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        Yes. When provided by pediatric-experienced anesthesia professionals, office-based anesthesia can be safely administered to children. I specialize in pediatric anesthesia and use age-appropriate medications, monitoring, and recovery protocols to ensure safe and compassionate care.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 10: Who monitors me during the procedure? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        Who monitors me during the procedure?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        A dedicated anesthesia professional remains with you throughout the entire procedure, continuously monitoring vital signs such as heart rate, blood pressure, oxygen levels, and breathing. Your safety is their sole responsibility from start to finish.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 11: Do you accept insurance? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        Do you accept insurance?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        I operate as a fee-for-service (cash-based) provider and do not bill insurance directly. I can provide a detailed statement or superbill that you may submit to your insurance carrier for potential out-of-network reimbursement. Reimbursement varies by plan and is not guaranteed.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 12: How much does anesthesia cost and what should I expect to pay? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        How much does anesthesia cost and what should I expect to pay?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        Anesthesia costs vary based on procedure length, anesthesia type, medical complexity, and required equipment. I provide clear estimates in advance so you understand what to expect. Payment is typically due 5 to 8 days prior to the scheduled procedure.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 13: What happens after the procedure? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        What happens after the procedure?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        You will be monitored in the office during recovery until you are stable. Most patients go home the same day. Post-anesthesia care instructions will be provided to support a safe recovery.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 14: Who do I contact with questions about my anesthesia? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        Who do I contact with questions about my anesthesia?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700 mb-4">
+                        If you have questions before or after your procedure, you can contact me directly:
+                    </p>
+                    <div class="bg-red-50 border-l-4 border-red-700 p-4 rounded">
+                        <ul class="space-y-2 text-red-800">
+                            <li class="flex items-center">
+                                <i class="fas fa-phone text-red-600 mr-2"></i>
+                                <span><strong>Phone:</strong> <a href="tel:608-865-0971" class="text-red-800 hover:text-red-600 transition-colors">(608)865-0971</a></span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope text-red-600 mr-2"></i>
+                                <span><strong>Email:</strong> <a href="mailto:ErikMikkelsen@mikkelsenanesthesia.com" class="text-red-800 hover:text-red-600 transition-colors">ErikMikkelsen@mikkelsenanesthesia.com</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 15: What levels of sedation and anesthesia do you provide? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        What levels of sedation and anesthesia do you provide?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        I provide IV sedation, deep sedation, general anesthesia, and regional anesthesia as appropriate for office-based and outpatient procedures.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 16: How do we determine which type of anesthesia is appropriate? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        How do we determine which type of anesthesia is appropriate?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        Anesthesia selection is based on the procedure, patient medical history, ASA classification, anxiety level, and recovery considerations. I collaborate closely with referring providers to recommend the safest and most effective anesthesia plan.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 17: What does patient selection and medical clearance look like? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        What does patient selection and medical clearance look like?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        Patients undergo a pre-anesthesia assessment to evaluate risk factors and determine suitability for office-based anesthesia. When necessary, additional medical clearance or testing may be requested to ensure patient safety.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 18: What equipment and support does Mikkelsen Anesthesia LLC supply? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        What equipment and support do I supply?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        I bring hospital-grade anesthesia equipment to every case, including advanced monitoring, airway management tools, emergency medications, and oxygen delivery systems. All equipment meets or exceeds current safety standards.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 19: How do we coordinate scheduling and pre-op requirements? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        How do we coordinate scheduling and pre-op requirements?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        I work directly with your office to coordinate scheduling, patient instructions, and pre-operative requirements. This streamlines workflows and reduces administrative burden for your team.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 20: What makes Mikkelsen Anesthesia LLC different from other anesthesia providers? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        What makes me different from other anesthesia providers?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        I specialize exclusively in office-based and mobile anesthesia. This focused approach allows for deeper expertise in outpatient settings, streamlined coordination with providers, and personalized anesthesia care for each patient. I am dedicated solely to office-based anesthesia delivery, safety, and efficiency.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 21: How does billing work and what is the expected minimum fee? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        How does billing work and what is the expected minimum fee?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        Billing is based on anesthesia type, procedure duration, and patient complexity. I provide clear billing guidelines, including minimum fee expectations, upfront to avoid surprises.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 22: What are the benefits of mobile anesthesia compared to hospital referral? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        What are the benefits of mobile anesthesia compared to hospital referral?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        Mobile anesthesia allows patients to receive care in a familiar office setting while maintaining hospital-level safety standards. Benefits include improved scheduling flexibility, reduced patient stress, and greater procedural efficiency.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 23: How does mobile anesthesia improve efficiency and safety in office-based settings? -->
+            <div class="bg-gray-50 rounded-lg p-6">
+                <button class="w-full text-left flex items-center justify-between focus:outline-none">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        How does mobile anesthesia improve efficiency and safety in office-based settings?
+                    </h3>
+                    <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                </button>
+                <div class="hidden mt-4">
+                    <p class="text-gray-700">
+                        By integrating anesthesia services directly into your practice, procedures can be completed efficiently while maintaining safety. My dedicated anesthesia presence allows clinical teams to focus on patient care while anesthesia management is handled seamlessly.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-red-700 to-red-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Still Have Questions?
+        </h2>
+        <p class="text-xl mb-8 text-red-100">
+            Can't find the answer you're looking for? Contact us directly for personalized assistance with your anesthesia needs.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="{% url 'contact' %}" class="bg-white text-red-700 hover:bg-gray-100 px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+                Contact Our Team
+            </a>
+            <a href="{% url 'financial_policy' %}" class="border-2 border-white text-white hover:bg-white hover:text-red-700 px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+                View Financial Policy
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+// Simple FAQ toggle functionality
+document.querySelectorAll('.bg-gray-50 button').forEach(button => {
+    button.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        const icon = this.querySelector('i.fa-chevron-down');
+        
+        if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            icon.style.transform = 'rotate(180deg)';
+        } else {
+            content.classList.add('hidden');
+            icon.style.transform = 'rotate(0deg)';
+        }
+    });
+});
+</script>
+{% endwith %}
+{% endblock %}

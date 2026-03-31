@@ -1,0 +1,208 @@
+{% extends 'website/base.html' %}
+
+{% block title %}Home - Mikkelsen Anesthesia | Professional Mobile Anesthesia Services{% endblock %}
+
+{% block content %}
+{% with show_hero_quote=True %}
+<!-- Quote Section -->
+<section class="bg-gradient-to-r from-red-50 to-red-100 py-8 border-b border-red-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="bg-white rounded-lg shadow-lg p-6 inline-block">
+            <p class="text-2xl md:text-3xl text-red-800 italic font-bold">
+                "Concierge mobile anesthesia expert - where safe dreams come to you."
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-red-700 to-red-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                Expert Mobile Anesthesia Services
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-red-100 max-w-3xl mx-auto">
+                Providing comprehensive anesthesia solutions for dental offices, oral surgery centers, and outpatient facilities with exceptional patient care and safety.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="{% url 'contact' %}" class="bg-white text-red-700 hover:bg-gray-100 px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+                    Schedule Consultation
+                </a>
+                <a href="{% url 'services' %}" class="border-2 border-white text-white hover:bg-white hover:text-red-700 px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+                    Our Services
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    About Mikkelsen Anesthesia
+                </h2>
+                <p class="text-gray-600 mb-6 text-lg">
+                    Mikkelsen Anesthesia provides comprehensive anesthesia services specializing in mobile anesthesia solutions for office-based and outpatient healthcare settings. Our company delivers custom-tailored anesthesia services across a variety of outpatient environments.
+                </p>
+                <p class="text-gray-600 mb-6 text-lg">
+                    We focus on enhancing patient experience, comfort, and safety by offering a range of anesthesia options, from local anesthesia to deep sedation and general anesthesia, depending on procedural requirements and patient needs.
+                </p>
+                <a href="{% url 'about' %}" class="inline-flex items-center text-red-700 hover:text-red-800 font-semibold text-lg">
+                    Learn More About Us
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-8 flex items-center justify-center">
+                <i class="fas fa-user-md text-red-700 text-8xl"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Anesthesia Services
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our outpatient anesthesia services are designed to enhance patient comfort, reduce anxiety, and ensure safety during procedures performed outside of a hospital setting.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <i class="fas fa-tooth text-red-700 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Dental Anesthesia</h3>
+                <p class="text-gray-600 mb-4">
+                    Specialized anesthesia services for dental offices and oral surgery practices, ensuring patient comfort during complex procedures.
+                </p>
+                <a href="{% url 'services' %}" class="text-red-700 hover:text-red-800 font-medium">
+                    Learn More <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <i class="fas fa-clinic-medical text-red-700 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Outpatient Surgery</h3>
+                <p class="text-gray-600 mb-4">
+                    Comprehensive anesthesia solutions for ambulatory surgical centers and outpatient facilities with state-of-the-art monitoring.
+                </p>
+                <a href="{% url 'services' %}" class="text-red-700 hover:text-red-800 font-medium">
+                    Learn More <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <i class="fas fa-shield-alt text-red-700 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Safety & Monitoring</h3>
+                <p class="text-gray-600 mb-4">
+                    Advanced patient monitoring and safety protocols to ensure the highest standards of care in any outpatient setting.
+                </p>
+                <a href="{% url 'services' %}" class="text-red-700 hover:text-red-800 font-medium">
+                    Learn More <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Patient Information Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="order-2 lg:order-1">
+                <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-8 flex items-center justify-center">
+                    <i class="fas fa-file-medical text-black text-8xl"></i>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2">
+                <h2 class="text-3xl md:text-4xl font-bold text-black mb-6">
+                    Patient Information
+                </h2>
+                <p class="text-gray-600 mb-6 text-lg">
+                    We have helpful forms to make sure your care is just right for you. The anesthesia patient information forms will help us tailor your care to your specific needs.
+                </p>
+                <p class="text-gray-600 mb-6 text-lg">
+                    The pre- and post-anesthesia instructions will guide you in preparing for your upcoming appointment. Thanks to the latest anesthesia equipment, medications, and techniques from our skilled providers, outpatient anesthesia is safer than ever.
+                </p>
+                <a href="{% url 'patient_info' %}" class="inline-flex items-center text-red-700 hover:text-red-800 font-semibold text-lg">
+                    Access Patient Forms
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                What People Are Saying
+            </h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                </div>
+                <p class="text-gray-600 italic mb-4">
+                    "I would give Mikkelsen Anesthesia my highest recommendation with no reservation whatsoever. Their expertise and patient care are exceptional."
+                </p>
+                <p class="text-gray-800 font-semibold">- Healthcare Provider</p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                </div>
+                <p class="text-gray-600 italic mb-4">
+                    "Every time we work together feels like a true partnership. The team is not only highly skilled but also incredibly kind and dedicated to patient safety."
+                </p>
+                <p class="text-gray-800 font-semibold">- Dental Practice Manager</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-red-700 to-red-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Schedule a Consultation?
+        </h2>
+        <p class="text-xl mb-8 text-red-100">
+            Contact us today to learn how our mobile anesthesia services can enhance your practice and improve patient experience.
+        </p>
+        <a href="{% url 'contact' %}" class="bg-white text-red-700 hover:bg-gray-100 px-8 py-3 rounded-lg text-lg font-semibold transition-colors inline-block">
+            Get Started Now
+        </a>
+    </div>
+</section>
+{% endwith %}
+{% endblock %}

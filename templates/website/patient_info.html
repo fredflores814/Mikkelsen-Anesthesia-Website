@@ -1,0 +1,382 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}Patient Information - Mikkelsen Anesthesia{% endblock %}
+
+{% block content %}
+{% with show_hero_quote=True %}
+<!-- Quote Section -->
+<section class="bg-gradient-to-r from-red-50 to-red-100 py-8 border-b border-red-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="bg-white rounded-lg shadow-lg p-6 inline-block">
+            <p class="text-2xl md:text-3xl text-red-800 italic font-bold">
+                "Concierge mobile anesthesia expert - where safe dreams come to you."
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-red-700 to-red-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <div class="mb-8">
+                <img src="{% static 'images/Logo.jpg' %}" alt="Mikkelsen Anesthesia Logo" class="h-24 mx-auto mb-6" style="max-height: 120px;">
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Patient Information
+            </h1>
+            <p class="text-xl text-red-100 max-w-3xl mx-auto">
+                Everything you need to know about your anesthesia experience, from preparation to recovery
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Introduction -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Preparing for Your Anesthesia Experience
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                We have helpful forms and information to make sure your care is tailored to your specific needs. The anesthesia patient information forms will help us provide the safest, most comfortable experience possible.
+            </p>
+        </div>
+
+        <!-- Patient Forms Section -->
+        <div class="bg-gradient-to-r from-red-50 to-red-100 rounded-xl p-8 mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                        Patient Forms
+                    </h2>
+                    <p class="text-gray-700 mb-6 text-lg">
+                        Please complete these forms before your appointment to help us understand your medical history and anesthesia needs. This allows us to prepare appropriately and ensure your safety.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4 border border-red-200">
+                            <h3 class="font-semibold text-gray-900 mb-2">
+                                <i class="fas fa-file-medical text-red-600 mr-2"></i>
+                                Medical History Form
+                            </h3>
+                            <p class="text-gray-600 mb-2">Comprehensive medical history and medication information</p>
+                            <button class="bg-red-700 text-white hover:bg-red-800 px-4 py-2 rounded text-sm font-medium transition-colors">
+                                Download PDF
+                            </button>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4 border border-red-200">
+                            <h3 class="font-semibold text-gray-900 mb-2">
+                                <i class="fas fa-file-medical text-red-600 mr-2"></i>
+                                Anesthesia Consent Form
+                            </h3>
+                            <p class="text-gray-600 mb-2">Consent for anesthesia services and procedures</p>
+                            <button class="bg-red-700 text-white hover:bg-red-800 px-4 py-2 rounded text-sm font-medium transition-colors">
+                                Download PDF
+                            </button>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4 border border-red-200">
+                            <h3 class="font-semibold text-gray-900 mb-2">
+                                <i class="fas fa-file-medical text-red-600 mr-2"></i>
+                                Patient Information Sheet
+                            </h3>
+                            <p class="text-gray-600 mb-2">Personal information and contact details</p>
+                            <button class="bg-red-700 text-white hover:bg-red-800 px-4 py-2 rounded text-sm font-medium transition-colors">
+                                Download PDF
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-clipboard-list text-red-700 text-8xl"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pre-Operative Instructions -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">
+                Pre-Anesthesia Instructions
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                        <i class="fas fa-clock text-red-600 mr-2"></i>
+                        Fasting Guidelines
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span><strong>No food or milk products</strong> for 8 hours before your procedure</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span><strong>No clear liquids</strong> for 2 hours before your procedure</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Clear liquids include water, apple juice, black coffee, or tea</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Avoid gum, mints, and candy</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                        <i class="fas fa-pills text-red-600 mr-2"></i>
+                        Medication Guidelines
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Take blood pressure and heart medications with a small sip of water</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Stop blood thinners 5-7 days before (as directed by your doctor)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Bring a list of all medications and supplements to your appointment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Inform us of any allergies or previous reactions to anesthesia</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                        <i class="fas fa-car text-red-600 mr-2"></i>
+                        Transportation & Arrangements
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Arrange for a responsible adult to drive you home</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Someone should stay with you for 24 hours after anesthesia</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Do not drive, operate machinery, or make important decisions for 24 hours</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Wear comfortable, loose-fitting clothing</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                        <i class="fas fa-user-md text-red-600 mr-2"></i>
+                        Health Preparation
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Report any recent illnesses, especially colds or flu</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Remove makeup, nail polish, and jewelry</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Do not smoke for at least 12 hours before your procedure</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Shower the night before or morning of your procedure</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Post-Operative Instructions -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">
+                Post-Anesthesia Instructions
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                        <i class="fas fa-home text-red-600 mr-2"></i>
+                        First 24 Hours
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Rest quietly and avoid strenuous activity</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Do not drive, drink alcohol, or take sedatives</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Start with clear liquids and progress to light foods</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Take prescribed medications as directed</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                        <i class="fas fa-exclamation-triangle text-red-600 mr-2"></i>
+                        When to Call Us
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone text-red-600 mt-1 mr-2"></i>
+                            <span>Fever over 101°F (38.3°C)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone text-red-600 mt-1 mr-2"></i>
+                            <span>Severe nausea, vomiting, or inability to keep liquids down</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone text-red-600 mt-1 mr-2"></i>
+                            <span>Severe pain not controlled by prescribed medication</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone text-red-600 mt-1 mr-2"></i>
+                            <span>Shortness of breath or chest pain</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Anesthesia Types Information -->
+        <div>
+            <h2 class="text-3xl font-bold text-red-900 mb-8">
+                Understanding Your Anesthesia Options
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-red-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-red-900 mb-3">
+                        <i class="fas fa-syringe text-red-600 mr-2"></i>
+                        Local Anesthesia
+                    </h3>
+                    <p class="text-red-800">
+                        Numbs a small area while you remain fully awake. You may feel pressure but no pain. Recovery is immediate with no lingering effects.
+                    </p>
+                </div>
+                
+                <div class="bg-red-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-red-900 mb-3">
+                        <i class="fas fa-cloud text-red-600 mr-2"></i>
+                        Moderate Sedation
+                    </h3>
+                    <p class="text-red-800">
+                        You'll feel drowsy and relaxed but can respond to commands. Most patients have little to no memory of the procedure.
+                    </p>
+                </div>
+                
+                <div class="bg-red-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-red-900 mb-3">
+                        <i class="fas fa-moon text-red-600 mr-2"></i>
+                        Deep Sedation
+                    </h3>
+                    <p class="text-red-800">
+                        You're on the edge of consciousness but can still be awakened. Used for longer or more complex procedures.
+                    </p>
+                </div>
+                
+                <div class="bg-red-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-red-900 mb-3">
+                        <i class="fas fa-bed text-red-600 mr-2"></i>
+                        General Anesthesia
+                    </h3>
+                    <p class="text-red-800">
+                        You'll be completely unconscious and unaware. Commonly used for major surgical procedures or when other methods aren't suitable.
+                    </p>
+                </div>
+                
+                <div class="bg-red-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-red-900 mb-3">
+                        <i class="fas fa-brain text-red-600 mr-2"></i>
+                        Regional Anesthesia
+                    </h3>
+                    <p class="text-red-800">
+                        Numbs a larger area like an entire limb or lower body while you remain conscious. Often combined with sedation.
+                    </p>
+                </div>
+                
+                <div class="bg-red-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-red-900 mb-3">
+                        <i class="fas fa-shield-alt text-red-600 mr-2"></i>
+                        Monitored Care
+                    </h3>
+                    <p class="text-red-800">
+                        Continuous monitoring during procedures with local anesthesia, ensuring your safety throughout the entire process.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Emergency Contact -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-red-50 border border-red-200 rounded-xl p-8 text-center">
+            <h2 class="text-3xl font-bold text-red-900 mb-4">
+                <i class="fas fa-exclamation-circle text-red-600 mr-2"></i>
+                Emergency Contact Information
+            </h2>
+            <p class="text-red-800 mb-6 text-lg">
+                If you experience any concerning symptoms after your procedure or have urgent questions:
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <div class="bg-white rounded-lg p-4 border border-red-200">
+                    <i class="fas fa-phone text-red-600 text-2xl mb-2"></i>
+                    <p class="font-semibold text-red-900">Emergency Line</p>
+                    <p class="text-red-700 text-xl">(555) 911-ANES</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 border border-red-200">
+                    <i class="fas fa-hospital text-red-600 text-2xl mb-2"></i>
+                    <p class="font-semibold text-red-900">For Life-Threatening Emergencies</p>
+                    <p class="text-red-700 text-xl">Call 911</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-red-700 to-red-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Have Questions About Your Anesthesia?
+        </h2>
+        <p class="text-xl mb-8 text-red-100">
+            Our team is here to answer any questions you may have about your upcoming procedure and anesthesia care.
+        </p>
+        <a href="{% url 'contact' %}" class="bg-white text-red-700 hover:bg-gray-100 px-8 py-3 rounded-lg text-lg font-semibold transition-colors inline-block">
+            Contact Our Team
+        </a>
+    </div>
+</section>
+{% endwith %}
+{% endblock %}
