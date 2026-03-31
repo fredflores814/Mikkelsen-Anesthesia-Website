@@ -1,1 +1,1 @@
-web: gunicorn MikkelsenSite.wsgi
+web: gunicorn config.wsgi
