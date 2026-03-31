@@ -27,8 +27,9 @@ SECRET_KEY = "django-insecure-c8wohv5j)arkkfs3dn(eh46lj(qsynqncl(g%0=tgof#p)-70l
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "mikkelsenanesthesia.com",
-    "www.mikkelsenanesthesia.com"
+    "mikkelsen-anesthesia-website.onrender.com",
+    "www.mikkelsenanesthesia.com",
+    "mikkelsenanesthesia.com"
 ]
 
 
