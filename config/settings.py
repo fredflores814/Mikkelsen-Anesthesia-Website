@@ -164,4 +164,4 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Authorize.net configuration
 AUTHORIZE_NET_API_LOGIN_ID = os.environ.get('AUTHORIZE_NET_API_LOGIN_ID', '8173qc5EgP')
 AUTHORIZE_NET_TRANSACTION_KEY = os.environ.get('AUTHORIZE_NET_TRANSACTION_KEY', '5LfM3atyQ53S79cm')
-AUTHORIZE_NET_ENVIRONMENT = os.environ.get('AUTHORIZE_NET_ENVIRONMENT', 'sandbox')  # 'sandbox' or 'production'
+AUTHORIZE_NET_ENVIRONMENT = os.environ.get('AUTHORIZE_NET_ENVIRONMENT', 'production')  # 'sandbox' or 'production'
