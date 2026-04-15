@@ -1,5 +1,4 @@
 Django==5.2.5
 gunicorn==25.3.0
 whitenoise==6.11.0
-authorizenet==1.0.8
-lxml==4.9.4
+requests==2.32.3

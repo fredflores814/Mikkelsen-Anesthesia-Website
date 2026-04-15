@@ -160,86 +160,107 @@ def payment_success(request, payment_id):
         return redirect('payment')
 
 def process_authorize_net_payment(payment, form_data):
-    """Process payment using Authorize.net API"""
+    """Process payment using Authorize.net Direct API"""
     try:
-        from authorizenet import apicontractsv1
-        from authorizenet.apicontrollers import createTransactionController
+        import requests
+        import json
         from decimal import Decimal
         
-        # Set up merchant authentication
-        merchantAuth = apicontractsv1.merchantAuthenticationType()
-        merchantAuth.name = settings.AUTHORIZE_NET_API_LOGIN_ID
-        merchantAuth.transactionKey = settings.AUTHORIZE_NET_TRANSACTION_KEY
+        # Determine API endpoint
+        if settings.AUTHORIZE_NET_ENVIRONMENT == 'production':
+            api_url = "https://api2.authorize.net/xml/v1/request.api"
+        else:
+            api_url = "https://apitest.authorize.net/xml/v1/request.api"
         
-        # Set up credit card
-        creditCard = apicontractsv1.creditCardType()
-        creditCard.cardNumber = form_data['card_number'].replace(' ', '')
-        creditCard.expirationDate = form_data['expiration_date'].replace('/', '')
-        creditCard.cardCode = form_data['cvv']
+        # Create the XML request
+        xml_request = f"""<?xml version="1.0" encoding="utf-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+    <merchantAuthentication>
+        <name>{settings.AUTHORIZE_NET_API_LOGIN_ID}</name>
+        <transactionKey>{settings.AUTHORIZE_NET_TRANSACTION_KEY}</transactionKey>
+    </merchantAuthentication>
+    <refId>ref_{payment.id}</refId>
+    <transactionRequest>
+        <transactionType>authCaptureTransaction</transactionType>
+        <amount>{payment.amount}</amount>
+        <payment>
+            <creditCard>
+                <cardNumber>{form_data['card_number'].replace(' ', '')}</cardNumber>
+                <expirationDate>{form_data['expiration_date'].replace('/', '')}</expirationDate>
+                <cardCode>{form_data['cvv']}</cardCode>
+            </creditCard>
+        </payment>
+        <order>
+            <invoiceNumber>INV-{payment.id}</invoiceNumber>
+            <description>{payment.description or f'Payment from {payment.first_name} {payment.last_name}'}</description>
+        </order>
+        <billTo>
+            <firstName>{payment.first_name}</firstName>
+            <lastName>{payment.last_name}</lastName>
+        </billTo>
+        <customer>
+            <email>{payment.email}</email>
+        </customer>
+    </transactionRequest>
+</createTransactionRequest>"""
         
-        # Add credit card to payment type
-        paymentType = apicontractsv1.paymentType()
-        paymentType.creditCard = creditCard
+        # Make the API request
+        headers = {
+            'Content-Type': 'application/xml',
+            'Accept': 'application/xml'
+        }
         
-        # Set up transaction request
-        transactionRequest = apicontractsv1.transactionRequestType()
-        transactionRequest.transactionType = apicontractsv1.transactionTypeEnum.authCaptureTransaction
-        transactionRequest.amount = str(payment.amount)
-        transactionRequest.payment = paymentType
+        response = requests.post(api_url, data=xml_request.encode('utf-8'), headers=headers, timeout=30)
+        response.raise_for_status()
         
-        # Set up order
-        order = apicontractsv1.orderType()
-        order.invoiceNumber = f"INV-{payment.id}"
-        order.description = payment.description or f"Payment from {payment.first_name} {payment.last_name}"
-        transactionRequest.order = order
+        # Parse XML response
+        import xml.etree.ElementTree as ET
+        root = ET.fromstring(response.text)
         
-        # Set up customer info
-        customer = apicontractsv1.customerType()
-        customer.email = payment.email
-        transactionRequest.customer = customer
+        # Define namespace
+        ns = {'anet': 'AnetApi/xml/v1/schema/AnetApiSchema.xsd'}
         
-        # Set up bill to
-        billTo = apicontractsv1.customerAddressType()
-        billTo.firstName = payment.first_name
-        billTo.lastName = payment.last_name
-        transactionRequest.billTo = billTo
-        
-        # Create transaction request
-        createRequest = apicontractsv1.createTransactionRequest()
-        createRequest.merchantAuthentication = merchantAuth
-        createRequest.transactionRequest = transactionRequest
-        
-        # Create controller and get response
-        controller = createTransactionController(createRequest)
-        controller.setenvironment(settings.AUTHORIZE_NET_ENVIRONMENT)
-        
-        response = controller.execute()
-        
-        if response is not None:
-            if hasattr(response.messages, 'resultCode') and response.messages.resultCode == 'Ok':
-                transactionResponse = response.transactionResponse
-                if transactionResponse.responseCode == '1':  # Approved
+        # Check if transaction was successful
+        result_code = root.find('.//anet:resultCode', ns)
+        if result_code is not None and result_code.text == 'Ok':
+            transaction_response = root.find('.//anet:transactionResponse', ns)
+            if transaction_response is not None:
+                response_code = transaction_response.find('anet:responseCode', ns)
+                if response_code is not None and response_code.text == '1':  # Approved
+                    trans_id = transaction_response.find('anet:transId', ns)
+                    auth_code = transaction_response.find('anet:authCode', ns)
+                    
                     return {
                         'success': True,
-                        'transaction_id': transactionResponse.transId,
-                        'auth_code': transactionResponse.authCode
+                        'transaction_id': trans_id.text if trans_id is not None else '',
+                        'auth_code': auth_code.text if auth_code is not None else ''
                     }
                 else:
+                    # Get error message
+                    error_text = transaction_response.find('.//anet:text', ns)
                     return {
                         'success': False,
-                        'error_message': transactionResponse.errors.error[0].text if transactionResponse.errors else 'Transaction declined'
+                        'error_message': error_text.text if error_text is not None else 'Transaction declined'
                     }
             else:
                 return {
                     'success': False,
-                    'error_message': response.messages.message[0].text if response.messages else 'Unknown error'
+                    'error_message': 'No transaction response received'
                 }
         else:
+            # Get error message from response
+            error_text = root.find('.//anet:text', ns)
             return {
                 'success': False,
-                'error_message': 'No response from payment gateway'
+                'error_message': error_text.text if error_text is not None else 'Transaction failed'
             }
             
+    except requests.exceptions.RequestException as e:
+        logger.error(f"Authorize.net API request error: {str(e)}")
+        return {
+            'success': False,
+            'error_message': 'Payment gateway connection failed'
+        }
     except Exception as e:
         logger.error(f"Authorize.net API error: {str(e)}")
         return {
