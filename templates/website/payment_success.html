@@ -1,0 +1,161 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}Payment Success - Mikkelsen Anesthesia{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-green-600 to-green-800 text-white py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <div class="mb-8">
+                <div class="bg-white rounded-full p-4 inline-block">
+                    <i class="fas fa-check-circle text-green-600 text-5xl"></i>
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Payment Successful!
+            </h1>
+            <p class="text-xl text-green-100 max-w-2xl mx-auto">
+                Thank you for your payment. Your transaction has been processed successfully.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Payment Details -->
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gray-50 rounded-lg shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Payment Confirmation</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700 mb-4">Payment Information</h3>
+                    <dl class="space-y-3">
+                        <div class="flex justify-between">
+                            <dt class="text-gray-600">Payment Amount:</dt>
+                            <dd class="font-semibold text-gray-900">${{ payment.amount }}</dd>
+                        </div>
+                        <div class="flex justify-between">
+                            <dt class="text-gray-600">Transaction ID:</dt>
+                            <dd class="font-mono text-sm text-gray-900">{{ payment.transaction_id }}</dd>
+                        </div>
+                        <div class="flex justify-between">
+                            <dt class="text-gray-600">Authorization Code:</dt>
+                            <dd class="font-mono text-sm text-gray-900">{{ payment.auth_code }}</dd>
+                        </div>
+                        <div class="flex justify-between">
+                            <dt class="text-gray-600">Payment Date:</dt>
+                            <dd class="text-gray-900">{{ payment.created_at|date:"F d, Y" }}</dd>
+                        </div>
+                        <div class="flex justify-between">
+                            <dt class="text-gray-600">Payment Time:</dt>
+                            <dd class="text-gray-900">{{ payment.created_at|time:"g:i A" }}</dd>
+                        </div>
+                    </dl>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700 mb-4">Billing Information</h3>
+                    <dl class="space-y-3">
+                        <div>
+                            <dt class="text-gray-600">Name:</dt>
+                            <dd class="font-semibold text-gray-900">{{ payment.first_name }} {{ payment.last_name }}</dd>
+                        </div>
+                        <div>
+                            <dt class="text-gray-600">Email:</dt>
+                            <dd class="text-gray-900">{{ payment.email }}</dd>
+                        </div>
+                        {% if payment.phone %}
+                        <div>
+                            <dt class="text-gray-600">Phone:</dt>
+                            <dd class="text-gray-900">{{ payment.phone }}</dd>
+                        </div>
+                        {% endif %}
+                        {% if payment.practice_name %}
+                        <div>
+                            <dt class="text-gray-600">Practice/Facility:</dt>
+                            <dd class="text-gray-900">{{ payment.practice_name }}</dd>
+                        </div>
+                        {% endif %}
+                        {% if payment.description %}
+                        <div>
+                            <dt class="text-gray-600">Description:</dt>
+                            <dd class="text-gray-900">{{ payment.description }}</dd>
+                        </div>
+                        {% endif %}
+                    </dl>
+                </div>
+            </div>
+            
+            <!-- Email Confirmation Notice -->
+            <div class="mt-8 p-4 bg-blue-50 border-l-4 border-blue-600 rounded">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-info-circle text-blue-600"></i>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-sm text-blue-800">
+                            A payment confirmation has been sent to <strong>{{ payment.email }}</strong>. 
+                            Please save this email for your records.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Next Steps -->
+        <div class="mt-12 text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">What's Next?</h3>
+            <p class="text-gray-600 mb-8">
+                Your payment has been processed and we'll be in touch soon regarding your anesthesia services.
+            </p>
+            
+            <div class="space-y-4">
+                <a href="{% url 'home' %}" 
+                   class="inline-block bg-red-600 text-white hover:bg-red-700 px-6 py-3 rounded-lg text-lg font-semibold transition-colors">
+                    Return to Homepage
+                </a>
+                <br>
+                <a href="{% url 'contact' %}" 
+                   class="inline-block text-red-600 hover:text-red-700 font-medium">
+                    Contact Us if You Have Questions
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Information -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Questions About Your Payment?</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-phone text-red-600 text-xl mr-3"></i>
+                    <h3 class="text-lg font-semibold text-gray-900">Call Us</h3>
+                </div>
+                <p class="text-gray-700">
+                    <a href="tel:608-865-0971" class="text-gray-700 hover:text-red-600 transition-colors">(608) 865-0971</a>
+                </p>
+                <p class="text-gray-600 text-sm mt-2">Monday-Friday, 9AM-5PM CST</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-envelope text-red-600 text-xl mr-3"></i>
+                    <h3 class="text-lg font-semibold text-gray-900">Email Us</h3>
+                </div>
+                <p class="text-gray-700">
+                    <a href="mailto:ErikMikkelsen@mikkelsenanesthesia.com" class="text-gray-700 hover:text-red-600 transition-colors">ErikMikkelsen@mikkelsenanesthesia.com</a>
+                </p>
+                <p class="text-gray-600 text-sm mt-2">Include your Transaction ID: {{ payment.transaction_id }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

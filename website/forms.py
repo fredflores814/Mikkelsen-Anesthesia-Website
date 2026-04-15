@@ -1,5 +1,6 @@
 from django import forms
 from django.core.validators import RegexValidator
+from .models import Payment
 
 class ConsultationRequestForm(forms.Form):
     SERVICE_TYPE_CHOICES = [
@@ -82,3 +83,71 @@ class ConsultationRequestForm(forms.Form):
         initial='phone',
         widget=forms.RadioSelect
     )
+
+class PaymentForm(forms.ModelForm):
+    # Credit card fields
+    card_number = forms.CharField(
+        max_length=16,
+        widget=forms.TextInput(attrs={
+            'class': 'w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent',
+            'placeholder': '1234 5678 9012 3456',
+            'pattern': r'\d{16}',
+            'maxlength': '16'
+        })
+    )
+    
+    expiration_date = forms.CharField(
+        max_length=5,
+        widget=forms.TextInput(attrs={
+            'class': 'w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent',
+            'placeholder': 'MM/YY',
+            'pattern': r'(0[1-9]|1[0-2])\/\d{2}'
+        })
+    )
+    
+    cvv = forms.CharField(
+        max_length=4,
+        widget=forms.TextInput(attrs={
+            'class': 'w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent',
+            'placeholder': '123',
+            'pattern': r'\d{3,4}',
+            'maxlength': '4'
+        })
+    )
+    
+    class Meta:
+        model = Payment
+        fields = ['first_name', 'last_name', 'email', 'phone', 'practice_name', 'amount', 'description']
+        widgets = {
+            'first_name': forms.TextInput(attrs={
+                'class': 'w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent',
+                'placeholder': 'Enter your first name'
+            }),
+            'last_name': forms.TextInput(attrs={
+                'class': 'w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent',
+                'placeholder': 'Enter your last name'
+            }),
+            'email': forms.EmailInput(attrs={
+                'class': 'w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent',
+                'placeholder': 'Enter your email address'
+            }),
+            'phone': forms.TextInput(attrs={
+                'class': 'w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent',
+                'placeholder': 'Enter your phone number'
+            }),
+            'practice_name': forms.TextInput(attrs={
+                'class': 'w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent',
+                'placeholder': 'Enter your practice or facility name (optional)'
+            }),
+            'amount': forms.NumberInput(attrs={
+                'class': 'w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent',
+                'placeholder': '0.00',
+                'step': '0.01',
+                'min': '0.01'
+            }),
+            'description': forms.Textarea(attrs={
+                'rows': 3,
+                'class': 'w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent',
+                'placeholder': 'Payment description (optional)'
+            })
+        }
