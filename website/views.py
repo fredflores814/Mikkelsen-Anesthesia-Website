@@ -169,12 +169,15 @@ def process_authorize_net_payment(payment, form_data):
         logger.info(f"Processing payment: ${payment.amount} for {payment.first_name} {payment.last_name}")
         logger.info(f"Environment: {settings.AUTHORIZE_NET_ENVIRONMENT}")
         logger.info(f"API Login ID: {settings.AUTHORIZE_NET_API_LOGIN_ID}")
+        logger.info(f"Transaction Key (first 10 chars): {settings.AUTHORIZE_NET_TRANSACTION_KEY[:10]}...")
         
         # Determine API endpoint
         if settings.AUTHORIZE_NET_ENVIRONMENT == 'production':
             api_url = "https://api2.authorize.net/xml/v1/request.api"
         else:
             api_url = "https://apitest.authorize.net/xml/v1/request.api"
+        
+        logger.info(f"API URL: {api_url}")
         
         # Create the XML request
         xml_request = f"""<?xml version="1.0" encoding="utf-8"?>
