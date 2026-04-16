@@ -202,10 +202,10 @@ def process_authorize_net_payment(payment, form_data):
             <firstName>{payment.first_name}</firstName>
             <lastName>{payment.last_name}</lastName>
         </billTo>
-        <customer>
-            <email>{payment.email}</email>
-        </customer>
     </transactionRequest>
+    <customer>
+        <email>{payment.email}</email>
+    </customer>
 </createTransactionRequest>"""
         
         # Make the API request
