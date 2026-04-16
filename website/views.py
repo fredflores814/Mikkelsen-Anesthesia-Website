@@ -166,6 +166,10 @@ def process_authorize_net_payment(payment, form_data):
         import json
         from decimal import Decimal
         
+        logger.info(f"Processing payment: ${payment.amount} for {payment.first_name} {payment.last_name}")
+        logger.info(f"Environment: {settings.AUTHORIZE_NET_ENVIRONMENT}")
+        logger.info(f"API Login ID: {settings.AUTHORIZE_NET_API_LOGIN_ID}")
+        
         # Determine API endpoint
         if settings.AUTHORIZE_NET_ENVIRONMENT == 'production':
             api_url = "https://api2.authorize.net/xml/v1/request.api"
@@ -210,7 +214,10 @@ def process_authorize_net_payment(payment, form_data):
             'Accept': 'application/xml'
         }
         
+        logger.info(f"Sending request to: {api_url}")
         response = requests.post(api_url, data=xml_request.encode('utf-8'), headers=headers, timeout=30)
+        logger.info(f"Response status: {response.status_code}")
+        logger.info(f"Response text: {response.text[:500]}...")  # First 500 chars
         response.raise_for_status()
         
         # Parse XML response
