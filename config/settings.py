@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-c8wohv5j)arkkfs3dn(eh46lj(qsynqncl(g%0=tgof#p)-70l"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "mikkelsen-anesthesia-website.onrender.com",

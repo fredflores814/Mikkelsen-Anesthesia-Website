@@ -314,7 +314,7 @@ Payment Details:
 - Transaction ID: {payment.transaction_id}
 - Date: {payment.created_at.strftime('%B %d, %Y at %I:%M %p')}
 
-If you have any questions about this payment, please contact us at:
+If you have any questions about this payment, please contact me at:
 Email: ErikMikkelsen@mikkelsenanesthesia.com
 Phone: (608) 865-0971
 
