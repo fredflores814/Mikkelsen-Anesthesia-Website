@@ -17,6 +17,9 @@ def home(request):
 def services(request):
     return render(request, 'website/services.html')
 
+def forms(request):
+    return render(request, 'website/forms.html')
+
 def financial_policy(request):
     return render(request, 'website/financial_policy.html')
 
