@@ -106,6 +106,61 @@
                 </div>
             </div>
             
+            <!-- Billing Address -->
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">
+                    <i class="fas fa-map-marker-alt text-red-600 mr-2"></i>
+                    Billing Address
+                </h2>
+                <p class="text-gray-600 mb-6">
+                    Address verification is required for credit card processing. Please enter the billing address associated with your card.
+                </p>
+                
+                <div class="space-y-6">
+                    <div>
+                        <label for="address" class="block text-sm font-medium text-gray-700 mb-2">
+                            Street Address *
+                        </label>
+                        {{ form.address.errors }}
+                        {{ form.address }}
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="city" class="block text-sm font-medium text-gray-700 mb-2">
+                                City *
+                            </label>
+                            {{ form.city.errors }}
+                            {{ form.city }}
+                        </div>
+                        <div>
+                            <label for="state" class="block text-sm font-medium text-gray-700 mb-2">
+                                State *
+                            </label>
+                            {{ form.state.errors }}
+                            {{ form.state }}
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="zip_code" class="block text-sm font-medium text-gray-700 mb-2">
+                                ZIP Code *
+                            </label>
+                            {{ form.zip_code.errors }}
+                            {{ form.zip_code }}
+                        </div>
+                        <div>
+                            <label for="country" class="block text-sm font-medium text-gray-700 mb-2">
+                                Country
+                            </label>
+                            {{ form.country.errors }}
+                            {{ form.country }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <!-- Payment Details -->
             <div class="bg-gray-50 p-6 rounded-lg">
                 <h2 class="text-2xl font-bold text-gray-900 mb-6">Payment Details</h2>

@@ -204,6 +204,11 @@ def process_authorize_net_payment(payment, form_data):
         <billTo>
             <firstName>{payment.first_name}</firstName>
             <lastName>{payment.last_name}</lastName>
+            <address>{payment.address or ''}</address>
+            <city>{payment.city or ''}</city>
+            <state>{payment.state or ''}</state>
+            <zip>{payment.zip_code or ''}</zip>
+            <country>{payment.country or 'US'}</country>
         </billTo>
     </transactionRequest>
 </createTransactionRequest>"""

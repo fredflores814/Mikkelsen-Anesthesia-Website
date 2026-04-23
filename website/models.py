@@ -17,6 +17,14 @@ class Payment(models.Model):
     email = models.EmailField()
     phone = models.CharField(max_length=20, blank=True)
     practice_name = models.CharField(max_length=200, blank=True)
+    
+    # Address fields for AVS
+    address = models.CharField(max_length=255, blank=True)
+    city = models.CharField(max_length=100, blank=True)
+    state = models.CharField(max_length=50, blank=True)
+    zip_code = models.CharField(max_length=20, blank=True)
+    country = models.CharField(max_length=100, default='US')
+    
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField(blank=True)
     
