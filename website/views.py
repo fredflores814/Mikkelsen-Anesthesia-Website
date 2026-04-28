@@ -20,6 +20,9 @@ def services(request):
 def forms(request):
     return render(request, 'website/forms.html')
 
+def provider_forms(request):
+    return render(request, 'website/provider_forms.html')
+
 def financial_policy(request):
     return render(request, 'website/financial_policy.html')
 

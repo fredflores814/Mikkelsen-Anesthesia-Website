@@ -1,0 +1,160 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}Provider Forms - Mikkelsen Anesthesia{% endblock %}
+
+{% block content %}
+{% with show_hero_quote=True %}
+<!-- Quote Section -->
+<section class="bg-gradient-to-r from-red-50 to-red-100 py-8 border-b border-red-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="bg-white rounded-lg shadow-lg p-6 inline-block">
+            <p class="text-2xl md:text-3xl text-red-800 italic font-bold">
+                "Concierge Mobile Anesthesia Expert - Where Safe Dreams Come To You."
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-green-700 to-green-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <div class="mb-8">
+                <img src="{% static 'images/Logo.jpg' %}" alt="Mikkelsen Anesthesia Logo" class="h-24 mx-auto mb-6" style="max-height: 120px;">
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Provider Forms
+            </h1>
+            <p class="text-xl text-green-100 max-w-3xl mx-auto">
+                For healthcare facilities, providers, and offices to refer patients and schedule anesthesia services
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Provider Forms Content -->
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Introduction -->
+        <div class="mb-12">
+            <p class="text-lg text-gray-700 leading-relaxed text-center">
+                As a healthcare provider, you can use these secure forms to refer patients for anesthesia services or schedule procedures at your facility.
+            </p>
+        </div>
+
+        <!-- Provider Forms Section -->
+        <div class="bg-green-50 border-l-4 border-green-700 rounded-lg p-8 mb-12">
+            <h2 class="text-2xl font-bold text-green-900 mb-6">
+                <i class="fas fa-hospital text-green-700 mr-3"></i>
+                Facility & Provider Forms
+            </h2>
+            <p class="text-gray-700 mb-6">
+                These forms are for healthcare facilities, providers, and offices to refer patients or schedule anesthesia services.
+            </p>
+            
+            <!-- Anesthesia Procedure Booking Form -->
+            <div class="bg-white rounded-lg p-6 border border-gray-200">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">
+                    <i class="fas fa-calendar-check text-red-600 mr-2"></i>
+                    Anesthesia Procedure Booking Form
+                </h3>
+                <p class="text-gray-700 mb-4">
+                    Refer patients for anesthesia services or book your procedure using this secure online form.
+                </p>
+                <div class="text-center">
+                    <a href="https://mysecurepractice.com/Truform/0a3ac80e-fa79-47bf-94e3-f232dbc80ede/Submission/Create" 
+                       target="_blank" 
+                       class="inline-block bg-red-600 text-white hover:bg-red-700 px-6 py-3 rounded-lg font-semibold transition-colors">
+                        <i class="fas fa-procedures mr-2"></i>
+                        Complete Booking Form
+                    </a>
+                </div>
+                <div class="mt-4 p-3 bg-green-50 rounded-lg">
+                    <p class="text-sm text-green-800">
+                        <strong>For Referrals:</strong> Healthcare providers can use this form to refer patients for anesthesia services.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Scheduling Information -->
+            <div class="mt-6 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+                <p class="text-gray-700 text-center">
+                    <strong>To schedule with me, click the contact form and complete it. I will get back to you with my availability.</strong>
+                </p>
+                <div class="text-center mt-3">
+                    <a href="{% url 'contact' %}" 
+                       class="inline-block bg-yellow-600 text-white hover:bg-yellow-700 px-6 py-2 rounded-lg font-semibold transition-colors">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Go to Contact Form
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Provider Information Section -->
+        <div class="bg-blue-50 rounded-lg p-8 mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6">
+                <i class="fas fa-info-circle text-blue-700 mr-3"></i>
+                Working With Your Practice
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-semibold text-gray-900 mb-4">What I Provide</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                            <span>Mobile anesthesia services at your facility</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                            <span>Hospital-level equipment and monitoring</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                            <span>Comprehensive pre-operative evaluation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                            <span>Post-operative care and follow-up</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="bg-gray-50 rounded-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Questions About Provider Services?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-phone text-red-600 text-xl mr-3"></i>
+                        <h3 class="text-lg font-semibold text-gray-900">Call Me</h3>
+                    </div>
+                    <p class="text-gray-700">
+                        <a href="tel:608-865-0971" class="text-gray-700 hover:text-red-600 transition-colors">(608) 865-0971</a>
+                    </p>
+                    <p class="text-gray-600 text-sm mt-2">I'm happy to discuss your facility's anesthesia needs</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-envelope text-red-600 text-xl mr-3"></i>
+                        <h3 class="text-lg font-semibold text-gray-900">Email Me</h3>
+                    </div>
+                    <p class="text-gray-700">
+                        <a href="mailto:ErikMikkelsen@mikkelsenanesthesia.com" class="text-gray-700 hover:text-red-600 transition-colors">ErikMikkelsen@mikkelsenanesthesia.com</a>
+                    </p>
+                    <p class="text-gray-600 text-sm mt-2">Send facility inquiries and referral questions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endwith %}
+{% endblock %}

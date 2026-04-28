@@ -24,7 +24,7 @@
                 <img src="{% static 'images/Logo.jpg' %}" alt="Mikkelsen Anesthesia Logo" class="h-24 mx-auto mb-6" style="max-height: 120px;">
             </div>
             <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                Forms
+                Patient Forms
             </h1>
             <p class="text-xl text-red-100 max-w-3xl mx-auto">
                 Complete your required forms before your procedure for a smooth and efficient experience
@@ -47,137 +47,83 @@
                 Your privacy and security are important to us. Our online forms are HIPAA-compliant and encrypted to protect your personal health information.
             </p>
             
-            <!-- TruForm Integration -->
-            <div class="space-y-12">
-                <!-- Patient Forms Section -->
-                <div class="bg-blue-50 border-l-4 border-blue-700 rounded-lg p-6">
-                    <h3 class="text-2xl font-bold text-blue-900 mb-6">
-                        <i class="fas fa-user-injured text-blue-700 mr-3"></i>
-                        Patient Forms
-                    </h3>
-                    <p class="text-gray-700 mb-6">
-                        These forms are for patients to complete before their procedure. Please complete all required forms at least 48 hours before your appointment.
-                    </p>
-                    
-                    <div class="space-y-6">
-                        <!-- Patient Registration Form -->
-                        <div class="bg-white rounded-lg p-6 border border-gray-200">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4">
-                                <i class="fas fa-user-edit text-red-600 mr-2"></i>
-                                Patient Registration Form
-                            </h4>
-                            <p class="text-gray-700 mb-4">
-                                Complete your patient registration online. This form collects your personal information, medical history, and contact details.
-                            </p>
-                            <div class="text-center">
-                                <a href="https://mysecurepractice.com/Truform/a6cc7a40-a180-4ca6-b131-75b1f38f515d/Submission/Create" 
-                                   target="_blank" 
-                                   class="inline-block bg-red-600 text-white hover:bg-red-700 px-6 py-3 rounded-lg font-semibold transition-colors">
-                                    <i class="fas fa-file-medical mr-2"></i>
-                                    Complete Registration Form
-                                </a>
-                            </div>
-                            <div class="mt-4 p-3 bg-blue-50 rounded-lg">
-                                <p class="text-sm text-blue-800">
-                                    <strong>Save and Exit Feature:</strong> You can save your progress and return later to complete the form. A registration email will be sent to set up your login.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Financial Policy Form -->
-                        <div class="bg-white rounded-lg p-6 border border-gray-200">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4">
-                                <i class="fas fa-file-contract text-red-600 mr-2"></i>
-                                Financial Policy Form
-                            </h4>
-                            <p class="text-gray-700 mb-4">
-                                Review and acknowledge our financial policies and payment terms for anesthesia services.
-                            </p>
-                            <div class="text-center">
-                                <a href="https://mysecurepractice.com/Truform/355ae006-2e2f-4776-b670-8db3bf9dd79d/Submission/Create" 
-                                   target="_blank" 
-                                   class="inline-block bg-red-600 text-white hover:bg-red-700 px-6 py-3 rounded-lg font-semibold transition-colors">
-                                    <i class="fas fa-dollar-sign mr-2"></i>
-                                    Complete Financial Policy Form
-                                </a>
-                            </div>
-                            <div class="mt-4 p-3 bg-yellow-50 rounded-lg">
-                                <p class="text-sm text-yellow-800">
-                                    <strong>Required:</strong> This form must be completed before your procedure to ensure smooth processing.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- STOP-BANG Screening Tool -->
-                        <div class="bg-white rounded-lg p-6 border border-gray-200">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4">
-                                <i class="fas fa-clipboard-check text-red-600 mr-2"></i>
-                                STOP-BANG Screening Tool
-                            </h4>
-                            <p class="text-gray-700 mb-4">
-                                Complete this sleep apnea screening questionnaire to help us assess your anesthesia risk factors.
-                            </p>
-                            <div class="text-center">
-                                <a href="https://mysecurepractice.com/Truform/2439ba4c-d2f2-4269-bedc-19ae2bbe6e83/Submission/Create" 
-                                   target="_blank" 
-                                   class="inline-block bg-red-600 text-white hover:bg-red-700 px-6 py-3 rounded-lg font-semibold transition-colors">
-                                    <i class="fas fa-lungs mr-2"></i>
-                                    Complete STOP-BANG Screening
-                                </a>
-                            </div>
-                            <div class="mt-4 p-3 bg-purple-50 rounded-lg">
-                                <p class="text-sm text-purple-800">
-                                    <strong>Important:</strong> This screening tool helps us ensure your safety during anesthesia procedures.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Facility Forms Section -->
-                <div class="bg-green-50 border-l-4 border-green-700 rounded-lg p-6">
-                    <h3 class="text-2xl font-bold text-green-900 mb-6">
-                        <i class="fas fa-hospital text-green-700 mr-3"></i>
-                        Facility Forms
-                    </h3>
-                    <p class="text-gray-700 mb-6">
-                        These forms are for healthcare facilities, providers, and offices to refer patients or schedule anesthesia services.
-                    </p>
-                    
-                    <!-- Anesthesia Procedure Booking Form -->
+            <!-- Patient Forms Section -->
+            <div class="bg-blue-50 border-l-4 border-blue-700 rounded-lg p-8">
+                <h2 class="text-2xl font-bold text-blue-900 mb-6">
+                    <i class="fas fa-user-injured text-blue-700 mr-3"></i>
+                    Patient Forms
+                </h2>
+                
+                <div class="space-y-6">
+                    <!-- Patient Registration Form -->
                     <div class="bg-white rounded-lg p-6 border border-gray-200">
-                        <h4 class="text-xl font-bold text-gray-900 mb-4">
-                            <i class="fas fa-calendar-check text-red-600 mr-2"></i>
-                            Anesthesia Procedure Booking Form
-                        </h4>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            <i class="fas fa-user-edit text-red-600 mr-2"></i>
+                            Patient Registration Form
+                        </h3>
                         <p class="text-gray-700 mb-4">
-                            Refer patients for anesthesia services or book your procedure using this secure online form.
+                            Complete your patient registration online. This form collects your personal information, medical history, and contact details.
                         </p>
                         <div class="text-center">
-                            <a href="https://mysecurepractice.com/Truform/0a3ac80e-fa79-47bf-94e3-f232dbc80ede/Submission/Create" 
+                            <a href="https://mysecurepractice.com/Truform/a6cc7a40-a180-4ca6-b131-75b1f38f515d/Submission/Create" 
                                target="_blank" 
                                class="inline-block bg-red-600 text-white hover:bg-red-700 px-6 py-3 rounded-lg font-semibold transition-colors">
-                                <i class="fas fa-procedures mr-2"></i>
-                                Complete Booking Form
+                                <i class="fas fa-file-medical mr-2"></i>
+                                Complete Registration Form
                             </a>
                         </div>
-                        <div class="mt-4 p-3 bg-green-50 rounded-lg">
-                            <p class="text-sm text-green-800">
-                                <strong>For Referrals:</strong> Healthcare providers can use this form to refer patients for anesthesia services.
+                        <div class="mt-4 p-3 bg-blue-50 rounded-lg">
+                            <p class="text-sm text-blue-800">
+                                <strong>Save and Exit Feature:</strong> You can save your progress and return later to complete the form. A registration email will be sent to set up your login.
                             </p>
                         </div>
                     </div>
-                    
-                    <div class="mt-6 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
-                        <p class="text-gray-700 text-center">
-                            <strong>To schedule with me, click the contact form and complete it. I will get back to you with my availability.</strong>
+
+                    <!-- Financial Policy Form -->
+                    <div class="bg-white rounded-lg p-6 border border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            <i class="fas fa-file-contract text-red-600 mr-2"></i>
+                            Financial Policy Form
+                        </h3>
+                        <p class="text-gray-700 mb-4">
+                            Review and acknowledge my financial policies and payment terms for anesthesia services.
                         </p>
-                        <div class="text-center mt-3">
-                            <a href="{% url 'contact' %}" 
-                               class="inline-block bg-yellow-600 text-white hover:bg-yellow-700 px-6 py-2 rounded-lg font-semibold transition-colors">
-                                <i class="fas fa-envelope mr-2"></i>
-                                Go to Contact Form
+                        <div class="text-center">
+                            <a href="https://mysecurepractice.com/Truform/355ae006-2e2f-4776-b670-8db3bf9dd79d/Submission/Create" 
+                               target="_blank" 
+                               class="inline-block bg-red-600 text-white hover:bg-red-700 px-6 py-3 rounded-lg font-semibold transition-colors">
+                                <i class="fas fa-dollar-sign mr-2"></i>
+                                Complete Financial Policy Form
                             </a>
+                        </div>
+                        <div class="mt-4 p-3 bg-yellow-50 rounded-lg">
+                            <p class="text-sm text-yellow-800">
+                                <strong>Required:</strong> This form must be completed before your procedure to ensure smooth processing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- STOP-BANG Screening Tool -->
+                    <div class="bg-white rounded-lg p-6 border border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            <i class="fas fa-clipboard-check text-red-600 mr-2"></i>
+                            STOP-BANG Screening Tool
+                        </h3>
+                        <p class="text-gray-700 mb-4">
+                            Complete this sleep apnea screening questionnaire to help me assess your anesthesia risk factors.
+                        </p>
+                        <div class="text-center">
+                            <a href="https://mysecurepractice.com/Truform/2439ba4c-d2f2-4269-bedc-19ae2bbe6e83/Submission/Create" 
+                               target="_blank" 
+                               class="inline-block bg-red-600 text-white hover:bg-red-700 px-6 py-3 rounded-lg font-semibold transition-colors">
+                                <i class="fas fa-lungs mr-2"></i>
+                                Complete STOP-BANG Screening
+                            </a>
+                        </div>
+                        <div class="mt-4 p-3 bg-purple-50 rounded-lg">
+                            <p class="text-sm text-purple-800">
+                                <strong>Important:</strong> This screening tool helps us ensure your safety during anesthesia procedures.
+                            </p>
                         </div>
                     </div>
                 </div>
