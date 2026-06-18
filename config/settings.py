@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-c8wohv5j)arkkfs3dn(eh46lj(qsynqncl(g%0=tgof#p)-70l"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "mikkelsen-anesthesia-website.onrender.com",
@@ -160,6 +160,9 @@ CONTACT_EMAIL = 'ErikMikkelsen@mikkelsenanesthesia.com'  # Email where consultat
 
 # WhiteNoise static files storage for production
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# WhiteNoise configuration
+WHITENOISE_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Authorize.net configuration
 AUTHORIZE_NET_API_LOGIN_ID = os.environ.get('AUTHORIZE_NET_API_LOGIN_ID', '8T73qc5EgP')
